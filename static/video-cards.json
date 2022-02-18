@@ -1,0 +1,42 @@
+[
+  {
+    "title": "Menulis Kreatif dan Terstruktur agar Produk Laris di Pasaran",
+    "avatar": "https://i.pravatar.cc/300",
+    "background": "#0EA5E9",
+    "isLocked": false,
+    "video": {
+      "percent": 20,
+      "duration": 1200
+    }
+  },
+  {
+    "title": "Menulis Kreatif dan Terstruktur agar Produk Laris di Pasaran",
+    "avatar": "https://i.pravatar.cc/300",
+    "background": "#3B82F6",
+    "isLocked": false,
+    "video": {
+      "percent": 75,
+      "duration": 600
+    }
+  },
+  {
+    "title": "Menulis Kreatif dan Terstruktur agar Produk Laris di Pasaran",
+    "avatar": "https://i.pravatar.cc/300",
+    "background": "#A855F7",
+    "isLocked": false,
+    "video": {
+      "percent": 50,
+      "duration": 1800
+    }
+  },
+  {
+    "title": "Menulis Kreatif dan Terstruktur agar Produk Laris di Pasaran",
+    "avatar": "https://i.pravatar.cc/300",
+    "background": "#EF4444",
+    "isLocked": false,
+    "video": {
+      "percent": 10,
+      "duration": 2000
+    }
+  }
+]

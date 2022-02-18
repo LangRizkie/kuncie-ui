@@ -14,7 +14,12 @@
         <Input :placeholder="placeholder" />
       </SearchForm>
     </Div>
-    <VideoCardCarousel />
+    <CardVideoCarousel />
+    <Div class="trend_container">
+      <CardTrendCarousel />
+      <CardNewCarousel />
+    </Div>
+    <Navigation />
   </Div>
 </template>
 
@@ -22,10 +27,20 @@
 import Vue from 'vue'
 import ButtonIcon from '~/components/button-icon.vue'
 import SearchForm from '~/components/search-form.vue'
-import VideoCardCarousel from '~/components/home/card-video-carousel.vue'
+import CardVideoCarousel from '~/components/home/card-video-carousel.vue'
+import CardTrendCarousel from '~/components/home/card-trend-carousel.vue'
+import CardNewCarousel from '~/components/home/card-new-carousel.vue'
+import Navigation from '~/components/navigation.vue'
 
 export default Vue.extend({
-  components: { ButtonIcon, SearchForm, VideoCardCarousel },
+  components: {
+    ButtonIcon,
+    SearchForm,
+    CardVideoCarousel,
+    CardTrendCarousel,
+    CardNewCarousel,
+    Navigation
+  },
   data: () => ({
     name: 'Gilang',
     placeholder: 'Cari Topik, Konten, atau Mentor'
@@ -52,5 +67,14 @@ export default Vue.extend({
       font-bold
       tracking-wider;
   }
+}
+
+.trend_container {
+  @apply flex
+    w-full
+    rounded-t-2xl
+    text-black
+    bg-white
+    flex-col;
 }
 </style>

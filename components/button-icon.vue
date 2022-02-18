@@ -1,9 +1,9 @@
 <template>
-  <Button>
-    <client-only>
+  <client-only>
+    <Button>
       <VIcon :name="icon" :fill="fill" :scale="scale" />
-    </client-only>
-  </Button>
+    </Button>
+  </client-only>
 </template>
 
 <script lang="ts">

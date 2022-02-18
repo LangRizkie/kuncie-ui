@@ -1,10 +1,14 @@
 <template>
-  <Div class="card_container" :class="['ml-6', 'bg-green-600']">
-    <P class="line-clamp-3">{{ title }}</P>
+  <Div class="card_container" :class="[{ card_locked: data.isLocked }]"
+    :style="{ background: data.background }">
+    <P class="font-black line-clamp-3">{{ data.title }}</P>
     <Div class="card_chip">{{ videoLength }}</Div>
-    <Div class="flex w-full justify-between">
-      <Avatar :src="avatar" />
-      <VideoProgressButton :percent="percent" />
+    <Div class="flex w-full items-center justify-between">
+      <Avatar :src="data.avatar" />
+      <client-only v-if="data.isLocked">
+        <VIcon name="ri-lock-2-fill" scale="2" />
+      </client-only>
+      <VideoProgressButton v-else :percent="data.video.percent" />
     </Div>
   </Div>
 </template>
@@ -16,26 +20,14 @@ import VideoProgressButton from './video-progress.vue'
 export default Vue.extend({
   components: { VideoProgressButton },
   props: {
-    title: {
-      type: String,
-      required: true
-    },
-    avatar: {
-      type: String,
-      required: true
-    },
-    percent: {
-      type: Number,
-      required: true
-    },
-    duration: {
-      type: Number,
+    data: {
+      type: Object,
       required: true
     }
   },
   computed: {
     videoLength() {
-      return `Video • ${this.$moment.utc(this.duration * 1000).format('mm:ss')} min`
+      return `Video • ${this.$moment.utc(this.data.video.duration * 1000).format('mm:ss')} min`
     }
   }
 })
@@ -48,7 +40,6 @@ export default Vue.extend({
       w-64
       h-48
       p-4
-      font-semibold
       rounded-lg
       flex-col
       items-start;
@@ -61,9 +52,12 @@ export default Vue.extend({
     text-xs
     font-semibold
     rounded-md
-    text-white
     bg-black/20
     items-center;
+  }
+
+  &_locked {
+    @apply grayscale bg-gray-300 text-gray-800;
   }
 }
 </style>

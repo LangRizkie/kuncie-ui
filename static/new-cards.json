@@ -1,0 +1,34 @@
+[
+  {
+    "title": "Menjelajahi Arti sebagai Seorang Pemimpin Muda",
+    "avatar": "https://i.pravatar.cc/300",
+    "background": "#A855F7",
+    "invertTextColor": false,
+    "isNew": true,
+    "artist": "putri tanjung"
+  },
+  {
+    "title": "Menjelajahi Arti sebagai Seorang Pemimpin Muda",
+    "avatar": "https://i.pravatar.cc/300",
+    "background": "#EF4444" ,
+    "invertTextColor": false,
+    "isNew": true,
+    "artist": "raditya dika"
+  },
+  {
+    "title": "Menjelajahi Arti sebagai Seorang Pemimpin Muda",
+    "avatar": "https://i.pravatar.cc/300",
+    "background": "#0EA5E9",
+    "invertTextColor": true,
+    "isNew": true,
+    "artist": "gilang rizkie"
+  },
+  {
+    "title": "Menjelajahi Arti sebagai Seorang Pemimpin Muda",
+    "avatar": "https://i.pravatar.cc/300",
+    "background": "#3B82F6",
+    "invertTextColor": true,
+    "isNew": true,
+    "artist": "hotman paris"
+  }
+]

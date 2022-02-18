@@ -12,6 +12,8 @@ module.exports = {
         poppins: ['Poppins']
       },
       width: {
+        'min': 'min-content',
+        'max': 'max-content',
         'screen-sm': '640px',
         'screen-md': '768px',
         'screen-lg': '976px',
@@ -24,6 +26,7 @@ module.exports = {
     },
   },
   plugins: [
-    require('@tailwindcss/line-clamp')
+    require('@tailwindcss/line-clamp'),
+    require('tailwindcss-bg-patterns')
   ]
 }

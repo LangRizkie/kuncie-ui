@@ -1,11 +1,11 @@
 <template>
-  <Div class="flex w-full my-10 flex-col">
-    <Section class="px-6" title="Rencana belajar" button="Lihat Rencana" />
+  <Div class="flex w-full flex-col">
+    <Section class="px-6 pt-6" title="Lagi Trending 📈" />
     <Div class="my-4">
       <client-only v-if="cards">
         <swiper ref="cardSwiper" :options="cardSwiperOptions">
           <swiper-slide v-for="(each, index) in cards" :key="index">
-            <CardVideo class="ml-6"
+            <CardTrend class="ml-6"
               :class="{ 'mr-6' : index === cards.length - 1 }" :data="each" />
           </swiper-slide>
         </swiper>
@@ -13,14 +13,14 @@
     </Div>
   </Div>
 </template>
+
 <script lang="ts">
 import Vue from 'vue'
-
-import cardVideo from '../card-video.vue'
-import Section from '../section.vue'
+import CardTrend from '../card-trend.vue'
+import Section from '~/components/section.vue'
 
 export default Vue.extend({
-  components: { cardVideo, Section },
+  components: { Section, CardTrend },
   data: () => ({
     cardSwiperOptions: {
       slidesPerView: 'auto'
@@ -34,7 +34,7 @@ export default Vue.extend({
   },
   methods: {
     getCardsList() {
-      this.$axios.get('/video-cards.json')
+      this.$axios.get('/trend-cards.json')
         .then((cards: any) => {
           this.cards = cards.data
         })
@@ -48,3 +48,4 @@ export default Vue.extend({
   @apply w-min #{!important};
 }
 </style>
+

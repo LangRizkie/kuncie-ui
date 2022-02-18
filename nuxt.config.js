@@ -14,7 +14,8 @@ export default {
   css: ['@/assets/global.scss'],
   plugins: [
     { src: '@/plugins/icons.plugin', ssr: false },
-    { src: '@/plugins/circular.plugin', ssr: false }
+    { src: '@/plugins/circular.plugin', ssr: false },
+    { src: '@/plugins/swiper.plugin', ssr: false }
   ],
   components: true,
   buildModules: [
