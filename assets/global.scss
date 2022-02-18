@@ -1,0 +1,9 @@
+* {
+  @apply font-poppins tracking-wide;
+}
+
+input {
+  @apply w-full
+  bg-transparent
+  outline-none;
+}
